@@ -68,7 +68,7 @@ df_anac = pd.concat([df_origem, df_destino], ignore_index=True)
 st.sidebar.title("Filtros")
 filtro_ano = st.sidebar.selectbox("Ano", df_anac["ANO"].unique())
 filtro_graficos = st.sidebar.radio(
-    'Gráficos', ['Passageiros top 10', 'Movimentos', 'Carga Aérea','Evolução'])
+    'Gráficos', ['Passageiros', 'Movimentos', 'Carga Aérea','Evolução'])
 
 if filtro_graficos == "Passageiros":
     # PAX
