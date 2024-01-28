@@ -68,7 +68,7 @@ df_anac = pd.concat([df_origem, df_destino], ignore_index=True)
 st.sidebar.title("Filtros")
 filtro_ano = st.sidebar.selectbox("Ano", df_anac["ANO"].unique())
 filtro_graficos = st.sidebar.radio(
-    'Gráficos', ['Passageiros', 'Movimentos', 'Carga Aérea','Evolução'])
+    'Gráficos', ['Passageiros', 'Movimentos', 'Carga Aérea', 'Evolução'])
 
 if filtro_graficos == "Passageiros":
     # PAX
@@ -98,7 +98,7 @@ elif filtro_graficos == "Movimentos":
     fig_atm = px.bar(df_anac_group_atm, x="AERODROMO", y="DECOLAGENS",
                      title="Ranking de aeródromos por movimentos - Top 10")
     fig_atm.update_traces(texttemplate='%{value}', textposition='outside')
-    #col2.plotly_chart(fig_atm, use_container_width=True)
+    # col2.plotly_chart(fig_atm, use_container_width=True)
     fig_atm
 
 elif filtro_graficos == "Carga Aérea":
@@ -133,7 +133,7 @@ elif filtro_graficos == "Carga Aérea":
     col2.plotly_chart(fig_correio, use_container_width=True)
 
 else:
-    st.sidebar.selectbox("Aeródromos",df_anac["AERODROMO"].unique())
-    
+    st.sidebar.selectbox("Aeródromos", df_anac["AERODROMO"].unique())
+
 st.markdown("""---""")
 st.markdown("*Dados atualizados até 31 de dezembro de 2023*")
