@@ -97,7 +97,7 @@ elif filtro_graficos == "Movimentos":
     # criando o grafico pax
     fig_atm = px.bar(df_anac_group_atm, x="AERODROMO", y="DECOLAGENS",
                      title="Ranking de aeródromos por movimentos - Top 10")
-    #fig_atm.update_traces(texttemplate='%{value}', textposition='outside')
+    fig_atm.update_traces(texttemplate='%{value}', textposition='outside')
     #col2.plotly_chart(fig_atm, use_container_width=True)
     fig_atm
 
@@ -132,6 +132,6 @@ else:
     fig_correio.update_traces(texttemplate='%{value}', textposition='outside')
     col2.plotly_chart(fig_correio, use_container_width=True)
 
-    st.markdown("#")
-    st.markdown("""---""")
-    st.markdown("*Dados atualizados até 31 de dezembro de 2023*")
+st.markdown("#")
+st.markdown("""---""")
+st.markdown("*Dados atualizados até 31 de dezembro de 2023*")
