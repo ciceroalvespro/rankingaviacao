@@ -101,7 +101,7 @@ elif filtro_graficos == "Movimentos":
     #col2.plotly_chart(fig_atm, use_container_width=True)
     fig_atm
 
-else:
+elif filtro_graficos == "Carga Aérea":
     # CARGO
     # preparando o grafico
     # layout dos graficos
@@ -132,6 +132,9 @@ else:
     fig_correio.update_traces(texttemplate='%{value}', textposition='outside')
     col2.plotly_chart(fig_correio, use_container_width=True)
 
-st.markdown("#")
+else:
+    print("em construção")
+        #teste
+    
 st.markdown("""---""")
 st.markdown("*Dados atualizados até 31 de dezembro de 2023*")
