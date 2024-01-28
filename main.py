@@ -133,8 +133,8 @@ elif filtro_graficos == "Carga Aérea":
     col2.plotly_chart(fig_correio, use_container_width=True)
 
 else:
-    print("em construção")
-        #teste
+    df_aerodromo = df_anac[df_anac["AERODROMO"].unique()]
+    st.sidebar.selectbox("Aerodromo",df_aerodromo)
     
 st.markdown("""---""")
 st.markdown("*Dados atualizados até 31 de dezembro de 2023*")
