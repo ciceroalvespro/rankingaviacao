@@ -13,7 +13,7 @@ st.set_page_config(
 # url do banco de dados
 base_url = "https://raw.githubusercontent.com/ciceroalvespro/portifolio_python_streamlit/master/Dados%20publicos%20anac/dados_publicos_anac_{}.csv"
 
-Titulo da página
+#Titulo da página
 st.markdown("<h2 style='color:#004E8c'>Ranking e Evolução dos Aeroportos Brasileiros</h2>",
             unsafe_allow_html=True)
 st.markdown("<span style='color:#cccc'>*Fonte: Agência Nacional de Aviação Civil - ANAC*</span>",
